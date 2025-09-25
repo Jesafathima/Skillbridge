@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-/* import Login from './pages/Login';
-import Register from './pages/Register'; */
+import Login from './pages/Login';
+import Register from './pages/Register'; 
 //import CreateCourse from './pages/CreateCourse';
 
 function App() {
@@ -9,7 +9,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        
+        <Route path="/login" element={<login/>}/>
+        <Route path="/register" element={<Register />} />
       </Routes>
     </Router>
   );
@@ -18,5 +19,4 @@ function App() {
 export default App;
 
 /*<Route path="/create" element={<CreateCourse />} />
-<Route path="/login" element={<Login />} />
-<Route path="/register" element={<Register />} />*/
+*/
