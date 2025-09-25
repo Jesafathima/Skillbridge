@@ -8,7 +8,7 @@ const Home = () => {
 
   useEffect(() => {
     const sampleCourses = [
-      { _id: 1, title: "React Basics", description: "Learn React" },
+      { _id: 1, title: "React Basics", description: "Learn React online" },
       { _id: 2, title: "Node.js Intro", description: "Learn Node backend" },
       { _id: 3, title: "MongoDB Guide", description: "Learn MongoDB database" }
     ];
