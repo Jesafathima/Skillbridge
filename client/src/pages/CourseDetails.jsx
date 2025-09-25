@@ -23,7 +23,7 @@ const CourseDetails =() => {
     fetchCourse();
   }, [id]);
 
-  //if (loading) return <Loading />;
+  if (loading) return <p>Loading....</p>;
 
   if (!course) return <p>Course not found.</p>;
 

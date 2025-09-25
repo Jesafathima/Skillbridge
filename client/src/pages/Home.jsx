@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-//import axios from "../services/api"; // we’ll create this api.js file
+//import api from "../services/api"; // we’ll create this api.js file
 import CourseCard from "../components/CourseCard"; // reusable card component
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -18,7 +18,7 @@ const Home = () => {
     setCourses(sampleCourses); 
     /* const getCourses = async () => {
       try {
-        const response = await axios.get("/courses");
+        const response = await api.get("/courses");
         setCourses(response.data);
       } catch (err) {
         console.error('Error fetching courses:', err);
