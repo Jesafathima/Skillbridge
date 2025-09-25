@@ -1,6 +1,6 @@
-import React,{useState} from "react";
+import {useState} from "react";
 import {useNavigate} from "react-router-dom";
-import axios from "../services/api";
+import api from "../services/api";
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -11,7 +11,7 @@ const Login = () => {
     const handlelogin = async (e) =>{
        e.preventDefault();
        try{
-        const response = await axios.post("/auth/login", {email, password});
+        const response = await api.post("/auth/login", {email, password});
         navigate("/");
        } catch( err){
         setError ("Invalid Email or Password.");
