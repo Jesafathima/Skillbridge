@@ -3,7 +3,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register'; 
 import CourseDetails from './pages/Coursedetails';
-//import CreateCourse from './pages/CreateCourse';
+import CourseCreate from './pages/CourseCreate';
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
         <Route path="/login" element={<Login />}/>
         <Route path="/register" element={<Register />} />
         <Route path ="/courses/:id" element={<CourseDetails />} />
+        <Route path="/courses/create" element={<CourseCreate />} />
       </Routes>
     </Router>
   );
@@ -20,5 +21,5 @@ function App() {
 
 export default App;
 
-/*<Route path="/create" element={<CreateCourse />} />
+/*
 */
