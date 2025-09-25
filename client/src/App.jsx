@@ -1,0 +1,22 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+/* import Login from './pages/Login';
+import Register from './pages/Register'; */
+//import CreateCourse from './pages/CreateCourse';
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
+
+/*<Route path="/create" element={<CreateCourse />} />
+<Route path="/login" element={<Login />} />
+<Route path="/register" element={<Register />} />*/
