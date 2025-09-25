@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 //import axios from "../services/api"; // we’ll create this api.js file
 import CourseCard from "../components/CourseCard"; // reusable card component
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 
 const Home = () => {
@@ -28,7 +29,11 @@ const Home = () => {
 
   return (
     <div >
+      {/* Navigation bar Section */}
       <Navbar/>
+
+     
+      {/* Courses Section */}
       <h1 >Available Courses</h1>
       {courses.length > 0 ? (
         <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
@@ -39,6 +44,8 @@ const Home = () => {
       ) : (
         <p>No courses available yet.</p>
       )}
+      {/* Footer Section */}
+      <Footer/>
     </div>
   );
 };
