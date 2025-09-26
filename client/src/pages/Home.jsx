@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-//import api from "../services/api"; // we’ll create this api.js file
+import { useEffect, useState } from "react";
+import api from "../services/api"; // we’ll create this api.js file
 import CourseCard from "../components/CourseCard"; // reusable card component
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -10,13 +10,13 @@ const Home = () => {
   const [courses, setCourses] = useState([]);
 
   useEffect(() => {
-    const sampleCourses = [
+    /*const sampleCourses = [
       { _id: 1, title: "React Basics", description: "Learn React online" },
       { _id: 2, title: "Node.js Intro", description: "Learn Node backend" },
       { _id: 3, title: "MongoDB Guide", description: "Learn MongoDB database" }
     ];
-    setCourses(sampleCourses); 
-    /* const getCourses = async () => {
+    setCourses(sampleCourses);  */
+    const getCourses = async () => {
       try {
         const response = await api.get("/courses");
         setCourses(response.data);
@@ -25,7 +25,7 @@ const Home = () => {
       }
     };
 
-    getCourses(); */
+    getCourses();
   }, []);
 
   return (

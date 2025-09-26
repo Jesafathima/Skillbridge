@@ -2,6 +2,8 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import mongoose from "mongoose";
+import authRoutes from "./routes/authentication.js";
+
 
 dotenv.config();
 const app = express();
@@ -20,6 +22,8 @@ mongoose
 app.get("/", (req, res) => {
   res.send("SkillBridge API is running...");
 });
+
+app.use("/api/auth", authRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
