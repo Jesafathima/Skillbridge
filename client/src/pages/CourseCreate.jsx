@@ -14,13 +14,10 @@ const CourseCreate = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const token = localStorage.getItem("token");
+      //const token = localStorage.getItem("token");
       const response = await api.post(
-        "/courses",
-        { title, description, mediaUrl, content },
-        {
-          headers: { Authorization: `Bearer ${token}` }, // secure endpoint
-        }
+        "/courses",{ title, description, mediaUrl, content },
+        //{headers: { Authorization: `Bearer ${token}`},}
       );
       setSuccess("Course created successfully!");
       setError("");
@@ -39,40 +36,21 @@ const CourseCreate = () => {
         {success && <p className="text-green-500 text-center mb-4">{success}</p>}
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
-            type="text"
-            placeholder="Course Title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300"
-            required
+            type="text" placeholder="Course Title" value={title} onChange={(e) => setTitle(e.target.value)}
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300" required
           />
-          <textarea
-            placeholder="Course Description"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300"
-            rows="3"
-            required
+          <textarea placeholder="Course Description" value={description} onChange={(e) => setDescription(e.target.value)}
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300" rows="3" required
           ></textarea>
           <input
-            type="text"
-            placeholder="Media URL (Video/Image)"
-            value={mediaUrl}
-            onChange={(e) => setMediaUrl(e.target.value)}
+            type="text" placeholder="Media URL (Video/Image)" value={mediaUrl} onChange={(e) => setMediaUrl(e.target.value)}
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300"
           />
           <textarea
-            placeholder="Course Content (Markdown/Text)"
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300"
-            rows="6"
-            required
+            placeholder="Course Content (Markdown/Text)" value={content} onChange={(e) => setContent(e.target.value)}
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300" rows="6" required
           ></textarea>
-          <button
-            type="submit"
-            className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
-          >
+          <button type="submit" className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
             Create Course
           </button>
         </form>
