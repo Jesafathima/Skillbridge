@@ -56,16 +56,19 @@ const Home = () => {
       </section>
 
       {/* Courses Section */}
-      <h1 >Available Courses</h1>
-      {courses.length > 0 ? (
-        <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
-          {courses.map((course) => (
-            <CourseCard key={course._id} course={course} />
-          ))}
-        </div>
-      ) : (
-        <p>No courses available yet.</p>
-      )}
+      <div id="courses">
+        <h1 >Available Courses</h1>
+        {courses.length > 0 ? (
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
+            {courses.map((course) => (
+              <CourseCard key={course._id} course={course} />
+            ))}
+          </div>
+        ) : (
+          <p>No courses available yet.</p>
+        )}
+      </div>
+      
       {/* Footer Section */}
       <Footer/>
     </div>

@@ -28,7 +28,7 @@ const Login = () => {
         <form onSubmit={handlelogin} className="space-y-4">
           <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}
           className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300" required/>
-          <input type="password" placeholder="Password' value={password}" onChange={(e) => setPassword(e.target.value)}
+          <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}
           className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300" required/>
           <button type="submit" className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"> Login</button>
         </form>
