@@ -3,6 +3,13 @@ import api from "../services/api";
 import { useNavigate } from "react-router-dom";
 
 const CourseCreate = () => {
+
+  const role = localStorage.getItem("role");
+
+  if (role !== "creator") {
+    return <navigate to="/" />; 
+  } 
+
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [mediaUrl, setMediaUrl] = useState("");
@@ -14,10 +21,10 @@ const CourseCreate = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      //const token = localStorage.getItem("token");
+      const token = localStorage.getItem("token");
       const response = await api.post(
         "/courses",{ title, description, mediaUrl, content },
-        //{headers: { Authorization: `Bearer ${token}`},}
+        {headers: { Authorization: `Bearer ${token}`},}
       );
       setSuccess("Course created successfully!");
       setError("");

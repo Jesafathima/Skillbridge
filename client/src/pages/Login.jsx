@@ -12,6 +12,8 @@ const Login = () => {
        e.preventDefault();
        try{
         const response = await api.post("/auth/login", {email, password});
+        localStorage.setItem("token", response.data.token);
+        localStorage.setItem("role", response.data.user.role);
         navigate("/");
        } catch( err){
         setError ("Invalid Email or Password.");
@@ -32,7 +34,7 @@ const Login = () => {
         </form>
 
         <p className="mt-4 text-sm text-center">
-          Don't have an account? <a href="/regiter" className="text-blue-600 hover:underline">Register</a>
+          Don't have an account? <a href="/register" className="text-blue-600 hover:underline">Register</a>
         </p>
       </div>
      </div> 
