@@ -5,7 +5,7 @@ const courseSchema = new mongoose.Schema(
         title: { type: String, required: true}, 
         description: { type: String, required: true},
         content: { type: String, required: true }, 
-        videoUrl: { type: String },
+        mediaUrl: { type: String },
         createdBy: { type: mongoose.Schema.Types.ObjectId, ref: "User" }   
     },
     { timestamps: true }

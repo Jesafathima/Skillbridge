@@ -32,20 +32,20 @@ const CourseDetails =() => {
       <h1 className="text-3xl font-bold mb-4">{course.title}</h1>
       <p className="text-gray-700 mb-4">{course.description}</p>
 
-      {/* If mediaUrl is a video */}
-      {course.mediaUrl && (
-        <video
-          src={course.mediaUrl}
-          controls
-          className="w-full rounded-lg mb-4"
-        />
-      )}
-
       <div className="prose max-w-none">
         {course.content.split("\n").map((line, index) => (
           <p key={index}>{line}</p>
         ))}
       </div>
+       {/* If mediaUrl is a video */}
+      {
+        course.mediaUrl && (
+        <video
+          src={course.mediaUrl}
+          controls
+          className="w-full rounded-lg mb-4"
+        />)
+      } 
     </div>
   );
 }

@@ -10,12 +10,7 @@ const Home = () => {
   const [courses, setCourses] = useState([]);
 
   useEffect(() => {
-    /*const sampleCourses = [
-      { _id: 1, title: "React Basics", description: "Learn React online" },
-      { _id: 2, title: "Node.js Intro", description: "Learn Node backend" },
-      { _id: 3, title: "MongoDB Guide", description: "Learn MongoDB database" }
-    ];
-    setCourses(sampleCourses);  */
+    
     const getCourses = async () => {
       try {
         const response = await api.get("/courses");
@@ -42,11 +37,7 @@ const Home = () => {
         />
         <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
           <h1 className="text-4xl sm:text-5xl font-bold text-white">
-            Update your skills without limits
-          </h1>
-        </div>
-        <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-          <h1 className="text-4xl sm:text-5xl font-bold text-white">
+            Update your skills without limits <br/>
             Learn. Build. Share.
           </h1>
         </div>
