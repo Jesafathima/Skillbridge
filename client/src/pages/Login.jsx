@@ -23,7 +23,7 @@ const Login = () => {
   return (
     <div className="flex justify-center items-center h-screen  bg-gradient-to-br  from-gray-900 to-orange-400">
       <div className="bg-white p-8 rounded-xl shadow-lg w-96 bg-white/20">
-        <div className="flex flex-col items-center mb-4">
+        <div className="flex flex-col items-center">
           <UserIcon className="flex w-12 h-12 text-gray-200" />
         </div>
         <h2 className="text-2xl text-white font-bold mb-6 text-center">Login</h2>
@@ -36,7 +36,7 @@ const Login = () => {
             className="w-full pl-10 px-4 py-2 bg-transparent border-b border-gray-300 text-white focus:outline-none focus:ring focus:ring-blue-300" required/>
           </div>
          
-          <div className="relative w-80">
+          <div className="relative w-80 ">
             <LockClosedIcon className="absolute left-3 top-3 w-5 h-5 text-gray-200" />
             <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}
             className="w-full pl-10 px-4 py-2 bg-transparent border-b focus:outline-none focus:ring focus:ring-blue-300" required/>
