@@ -21,10 +21,12 @@ const Login = () => {
        }
     }
   return (
-     <div className="flex justify-center items-center h-screen  bg-gradient-to-br from-purple-900 via-indigo-900 to-black">
+    <div className="flex justify-center items-center h-screen  bg-gradient-to-br  from-gray-900 to-orange-400">
       <div className="bg-white p-8 rounded-xl shadow-lg w-96 bg-white/20">
-        <UserIcon className="left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-200" />
-        <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
+        <div className="flex flex-col items-center mb-4">
+          <UserIcon className="flex w-12 h-12 text-gray-200" />
+        </div>
+        <h2 className="text-2xl text-white font-bold mb-6 text-center">Login</h2>
         {error && <p className="text-red-500 text-center">{error}</p>}
 
         <form onSubmit={handlelogin} className="space-y-4">
@@ -40,11 +42,11 @@ const Login = () => {
             className="w-full pl-10 px-4 py-2 bg-transparent border-b focus:outline-none focus:ring focus:ring-blue-300" required/>
           </div>
          
-          <button type="submit" className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"> Login</button>
+          <button type="submit" className="w-full bg-gray-800 text-white py-2 rounded-lg hover:bg-gray-600  transition"> Login</button>
         </form>
 
         <p className="mt-4 text-sm text-center">
-          Don't have an account? <a href="/register" className="text-blue-600 hover:underline">Register</a>
+          Don't have an account? <a href="/register" className="text-white hover:underline">Register</a>
         </p>
       </div>
      </div> 
@@ -52,4 +54,3 @@ const Login = () => {
 };
 
 export default Login;
-//backdrop-blur-lg
