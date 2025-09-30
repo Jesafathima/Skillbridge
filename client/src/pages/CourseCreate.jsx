@@ -38,7 +38,7 @@ const CourseCreate = () => {
   return (
     <div className="flex justify-center items-center min-h-screen bg-orange-200 ">
       <div className=" bg-black/40 p-8 rounded-xl shadow-lg w-full max-w-2xl">
-        <h2 className="text-2xl font-bold mb-6 text-center">Create Course</h2>
+        <h2 className="text-3xl font-bold mb-6 text-center">Create Course</h2>
         {error && <p className="text-red-500 text-center mb-4">{error}</p>}
         {success && <p className="text-green-500 text-center mb-4">{success}</p>}
         <form onSubmit={handleSubmit} className="space-y-4">

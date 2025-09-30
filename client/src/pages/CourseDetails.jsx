@@ -28,25 +28,32 @@ const CourseDetails =() => {
   if (!course) return <p>Course not found.</p>;
 
   return (
-    <div className="p-6 max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold mb-4">{course.title}</h1>
-      <p className="text-gray-700 mb-4">{course.description}</p>
+    <div className="bg-gray-200 flex h-screen">
+      <div className="w-1/2 p-10  overflow-y-auto bg-black/20">
+        <h1 className="text-3xl text-orange-700 font-bold mb-4">{course.title}</h1>
+        <p className="text-gray-700 mb-10">{course.description}</p>
 
-      <div className="prose max-w-none">
-        {course.content.split("\n").map((line, index) => (
+        <div className="prose max-w-none mb-10">
+          <h3 className="text-orange-500 mb-2 ">Course Content</h3>
+          {course.content.split("\n").map((line, index) => (
           <p key={index}>{line}</p>
-        ))}
+          ))}
+        </div>
       </div>
-       {/* If mediaUrl is a video */}
+      
+      <div className="w-1/2 p-10 overflow-y-auto bg-orange-300">
       {
         course.mediaUrl && (
         <video
           src={course.mediaUrl}
           controls
-          className="w-full rounded-lg mb-4"
+          className="w-full text-center rounded-lg mb-4 h-80"
         />)
       } 
     </div>
+      
+    </div>
+    
   );
 }
 
