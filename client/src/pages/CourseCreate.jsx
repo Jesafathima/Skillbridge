@@ -36,8 +36,8 @@ const CourseCreate = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded-xl shadow-lg w-full max-w-2xl">
+    <div className="flex justify-center items-center min-h-screen bg-orange-200 ">
+      <div className=" bg-black/40 p-8 rounded-xl shadow-lg w-full max-w-2xl">
         <h2 className="text-2xl font-bold mb-6 text-center">Create Course</h2>
         {error && <p className="text-red-500 text-center mb-4">{error}</p>}
         {success && <p className="text-green-500 text-center mb-4">{success}</p>}
@@ -57,7 +57,7 @@ const CourseCreate = () => {
             placeholder="Course Content (Markdown/Text)" value={content} onChange={(e) => setContent(e.target.value)}
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300" rows="6" required
           ></textarea>
-          <button type="submit" className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+          <button type="submit" className="w-full bg-gray-800 text-white py-2 rounded-lg hover:bg-gray-700 transition">
             Create Course
           </button>
         </form>
